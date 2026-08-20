@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tempest Rosa — Create. Innovate. Elevate.</title>
+<meta name="description" content="Tempest Rosa is an independent digital studio building interactive experiences, intelligent software and visual worlds crafted from imagination.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,560;0,9..144,600;1,9..144,440;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- EmailJS SDK — powers the real email submission on the project-intake form. See the comment above the form in this file, or README.md, for the one-time setup. -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================================================
+     ENTRY SCREEN — cinematic threshold into the verse
+============================================================ -->
+<div id="entry" class="entry" aria-hidden="false">
+  <div class="entry__field" aria-hidden="true">
+    <span class="entry__coord entry__coord--tl">41.40&deg; N</span>
+    <span class="entry__coord entry__coord--br">EST. 2026</span>
+    <div class="entry__ring"></div>
+  </div>
+
+  <div class="entry__content">
+    <img class="entry__emblem" src="mainlogo.png" alt="" width="140" height="151" aria-hidden="true" fetchpriority="high">
+    <p class="entry__eyebrow">AN INDEPENDENT DIGITAL STUDIO</p>
+    <h1 class="entry__word">TEMPEST ROSA</h1>
+    <p class="entry__tagline">CREATE.&nbsp; INNOVATE.&nbsp; ELEVATE.</p>
+    <button type="button" id="enterBtn" class="entry__enter">
+      <span>ENTER&nbsp;THE&nbsp;VERSE</span>
+      <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden="true"><path d="M21 5H1M21 5L16 1M21 5L16 9" stroke="currentColor" stroke-width="1.2"/></svg>
+    </button>
+  </div>
+
+  <div class="entry__scrim" aria-hidden="true"></div>
+</div>
+
+<!-- ============================================================
+     SITE — revealed after entry
+============================================================ -->
+<div id="site" class="site" aria-hidden="true">
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="Tempest Rosa — home">
+        <img src="mainlogo-nav@2x.png" alt="" width="34" height="37" aria-hidden="true">
+        <span class="nav__brand-word">TEMPEST&nbsp;ROSA</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work"><span class="nav__num">01</span>WORK</a>
+        <a href="#atelier"><span class="nav__num">02</span>ATELIER</a>
+        <a href="#architect"><span class="nav__num">03</span>ARCHITECT</a>
+        <a href="#lab"><span class="nav__num">04</span>LAB</a>
+        <a href="#showcase"><span class="nav__num">05</span>SHOWCASE</a>
+        <a href="#community"><span class="nav__num">06</span>COMMUNITY</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#community" class="nav__cta">Start a project</a>
+        <button type="button" id="menuToggle" class="nav__burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE FULL-SCREEN MENU -->
+  <div id="mobileMenu" class="mmenu" aria-hidden="true">
+    <div class="mmenu__top">
+      <span class="mmenu__brand">TEMPEST&nbsp;ROSA</span>
+      <button type="button" id="menuClose" class="mmenu__close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M1 1L19 19M19 1L1 19" stroke="currentColor" stroke-width="1.3"/></svg>
+      </button>
+    </div>
+    <nav class="mmenu__links" aria-label="Mobile primary">
+      <a href="#work"><span>01</span>Work</a>
+      <a href="#atelier"><span>02</span>Atelier</a>
+      <a href="#architect"><span>03</span>Architect</a>
+      <a href="#lab"><span>04</span>Lab</a>
+      <a href="#showcase"><span>05</span>Showcase</a>
+      <a href="#community"><span>06</span>Community</a>
+    </nav>
+    <div class="mmenu__bottom">
+      <a href="#community" class="mmenu__cta">Start a project &rarr;</a>
+      <p class="mmenu__meta">EST. 2026 &middot; Independent Studio</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section id="hero" class="hero">
+      <p class="hero__ghost" aria-hidden="true">VERSE</p>
+
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal>
+            <span class="eyebrow__line" aria-hidden="true"></span>
+            TEMPEST ROSA &middot; EST. 2026
+          </p>
+          <h1 class="hero__headline" data-reveal>
+            We don&rsquo;t just<br>
+            build digital.<br>
+            <em>We make it<br> alive.</em>
+          </h1>
+          <p class="hero__sub" data-reveal>
+            Interactive experiences, intelligent software and visual worlds crafted from imagination.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a href="#work" class="btn btn--filled">Explore Our Work</a>
+            <a href="#atelier" class="btn btn--ghost">What We Create</a>
+          </div>
+        </div>
+
+        <div class="hero__mark" data-reveal>
+          <div class="orbit" data-orbit>
+            <div class="orbit__ring orbit__ring--1" aria-hidden="true"></div>
+            <div class="orbit__ring orbit__ring--2" aria-hidden="true"></div>
+            <span class="orbit__coord orbit__coord--1" aria-hidden="true">01 — EMBLEM</span>
+            <span class="orbit__coord orbit__coord--2" aria-hidden="true">T &middot; R &middot; ROSA</span>
+            <span class="orbit__tick orbit__tick--n" aria-hidden="true"></span>
+            <span class="orbit__tick orbit__tick--e" aria-hidden="true"></span>
+            <span class="orbit__tick orbit__tick--s" aria-hidden="true"></span>
+            <span class="orbit__tick orbit__tick--w" aria-hidden="true"></span>
+            <img class="orbit__emblem" src="mainlogo.png" alt="Tempest Rosa emblem — a stylised T, R and rose" width="380" height="411" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+
+      <a href="#work" class="hero__scroll" aria-label="Scroll to Selected Work">
+        <span>SCROLL</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         SELECTED WORK
+    ============================================================ -->
+    <section id="work" class="section work">
+      <div class="section__head">
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>SELECTED WORK</p>
+        <h2 class="section__title">A collection of things<br>we&rsquo;ve brought to life.</h2>
+      </div>
+
+      <div class="exhibits">
+
+        <article class="exhibit" data-reveal>
+          <span class="exhibit__num" aria-hidden="true">01</span>
+          <div class="exhibit__visual">
+            <div class="exhibit__visual-inner exhibit__visual-inner--ai">
+              <span class="exhibit__tag">EVOLUTION OF AI</span>
+            </div>
+          </div>
+          <div class="exhibit__info">
+            <h3 class="exhibit__title">Evolution of AI</h3>
+            <p class="exhibit__desc">An interactive journey through the evolution of artificial intelligence — from early concepts to modern AI systems.</p>
+            <a href="#" class="exhibit__link">ENTER PROJECT <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="exhibit exhibit--reverse" data-reveal>
+          <span class="exhibit__num" aria-hidden="true">02</span>
+          <div class="exhibit__visual">
+            <div class="exhibit__visual-inner exhibit__visual-inner--elan">
+              <span class="exhibit__tag">&Eacute;LAN</span>
+            </div>
+          </div>
+          <div class="exhibit__info">
+            <h3 class="exhibit__title">&Eacute;lan</h3>
+            <p class="exhibit__desc">A digital fashion and editorial experience — movement, texture and light rendered as interface.</p>
+            <a href="https://kevindevelops-ok.github.io/ELAN/" class="exhibit__link" target="_blank" rel="noopener">ENTER PROJECT <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </article>
+
+        <article class="exhibit" data-reveal>
+          <span class="exhibit__num" aria-hidden="true">03</span>
+          <div class="exhibit__visual">
+            <div class="exhibit__visual-inner exhibit__visual-inner--future">
+              <span class="exhibit__tag">FUTURE PROJECT</span>
+            </div>
+          </div>
+          <div class="exhibit__info">
+            <h3 class="exhibit__title">Future Project</h3>
+            <p class="exhibit__desc">An experimental digital experience, currently taking shape in the studio.</p>
+            <span class="exhibit__link exhibit__link--soon">COMING SOON</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THE ATELIER
+    ============================================================ -->
+    <section id="atelier" class="section atelier">
+      <div class="section__head">
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>THE ATELIER</p>
+        <h2 class="section__title">Tell us what you imagine.<br>We&rsquo;ll figure out how to build it.</h2>
+      </div>
+
+      <div class="services">
+        <div class="service" data-reveal>
+          <span class="service__num">01</span>
+          <h3 class="service__title">Digital Experiences</h3>
+          <ul class="service__list">
+            <li>Interactive websites</li>
+            <li>Immersive landing pages</li>
+            <li>Experimental interfaces</li>
+            <li>Interactive storytelling</li>
+          </ul>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__num">02</span>
+          <h3 class="service__title">Intelligent Systems</h3>
+          <ul class="service__list">
+            <li>AI-driven software</li>
+            <li>AI integrations</li>
+            <li>Automation</li>
+            <li>Custom digital tools</li>
+          </ul>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__num">03</span>
+          <h3 class="service__title">Web</h3>
+          <ul class="service__list">
+            <li>Business websites</li>
+            <li>Portfolio websites</li>
+            <li>Landing pages</li>
+            <li>Responsive websites</li>
+          </ul>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__num">04</span>
+          <h3 class="service__title">Editorial</h3>
+          <ul class="service__list">
+            <li>Digital magazines</li>
+            <li>Interactive publications</li>
+            <li>Digital editorial experiences</li>
+          </ul>
+        </div>
+        <div class="service" data-reveal>
+          <span class="service__num">05</span>
+          <h3 class="service__title">Visual</h3>
+          <ul class="service__list">
+            <li>Magazine covers</li>
+            <li>Profile pictures</li>
+            <li>Digital artwork</li>
+            <li>Promotional graphics</li>
+          </ul>
+        </div>
+        <a href="#community" class="service service--special" data-reveal>
+          <span class="service__num">06</span>
+          <h3 class="service__title">Something Else?</h3>
+          <p class="service__special-text">Have an idea that doesn&rsquo;t fit a category?</p>
+          <p class="service__special-cta">Tell us what you imagine <span aria-hidden="true">&rarr;</span></p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THE ARCHITECT
+    ============================================================ -->
+    <section id="architect" class="section architect">
+      <p class="architect__ghost" aria-hidden="true">03</p>
+      <div class="architect__grid">
+        <div class="architect__lead" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>THE ARCHITECT</p>
+          <h2 class="architect__statement">
+            Independent digital studio.<br>
+            Built from curiosity,<br>
+            code and imagination.
+          </h2>
+        </div>
+
+        <div class="architect__body" data-reveal>
+          <p class="architect__intro">Behind Tempest Rosa is a developer, designer and obsessive builder who believes technology should feel less like software and more like an experience.</p>
+          <p>There is no agency here, no floor of employees — just one person who designs in the morning, writes code in the afternoon, and keeps rebuilding the same idea at midnight until it feels alive. Every project that carries the Tempest Rosa name has passed through the same pair of hands.</p>
+          <p>Artificial intelligence is treated as a collaborator, not a shortcut — a way to move at the speed of imagination, to prototype faster, and to spend more time on the details that actually matter: rhythm, restraint, and the feeling a screen leaves behind.</p>
+          <p>Tempest Rosa exists because most software forgets to feel like anything at all. This studio is an ongoing argument against that — proof that a small, independent practice can still build things with the ambition, polish and care of something much larger.</p>
+          <div class="architect__facts">
+            <div><span class="architect__fact-label">STRUCTURE</span><span class="architect__fact-value">Independent &middot; solo-built</span></div>
+            <div><span class="architect__fact-label">TOOLING</span><span class="architect__fact-value">Design, code &amp; AI, in one loop</span></div>
+            <div><span class="architect__fact-label">FOUNDED</span><span class="architect__fact-value">2026</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THE LAB
+    ============================================================ -->
+    <section id="lab" class="section lab">
+      <div class="section__head">
+        <p class="eyebrow eyebrow--onlight"><span class="eyebrow__line" aria-hidden="true"></span>THE LAB</p>
+        <h2 class="section__title section__title--onlight">Some ideas don&rsquo;t need a client.<br>They just need to exist.</h2>
+      </div>
+
+      <p class="lab__intro" data-reveal>Tempest Rosa doesn&rsquo;t simply wait for clients. It explores, experiments, and imagines what could exist next — a running lab of ideas built for no one but curiosity itself.</p>
+
+      <div class="lab__grid">
+        <div class="lab__item" data-reveal>
+          <span class="lab__num">01</span>
+          <h3>AI Experiments</h3>
+          <p>Small, sharp studies in how intelligent systems can think, respond and create.</p>
+        </div>
+        <div class="lab__item" data-reveal>
+          <span class="lab__num">02</span>
+          <h3>Future Interfaces</h3>
+          <p>Interaction models for screens, voices and spaces that don&rsquo;t fully exist yet.</p>
+        </div>
+        <div class="lab__item" data-reveal>
+          <span class="lab__num">03</span>
+          <h3>Hypothetical Technology</h3>
+          <p>Concepts built to ask &ldquo;what if&rdquo; before anyone asks &ldquo;why&rdquo;.</p>
+        </div>
+        <div class="lab__item" data-reveal>
+          <span class="lab__num">04</span>
+          <h3>Prototypes</h3>
+          <p>Fast, rough, working things — built to be felt before they&rsquo;re finished.</p>
+        </div>
+        <div class="lab__item" data-reveal>
+          <span class="lab__num">05</span>
+          <h3>Digital Worlds</h3>
+          <p>Self-contained visual universes with their own rules, mood and logic.</p>
+        </div>
+      </div>
+
+      <!-- CURRENTLY IN THE VERSE -->
+      <div class="verse">
+        <p class="verse__label">CURRENTLY IN THE VERSE</p>
+        <ol class="verse__timeline">
+          <li data-reveal>
+            <span class="verse__date">08 / 2026</span>
+            <span class="verse__event">Building Tempest Rosa.</span>
+          </li>
+          <li data-reveal>
+            <span class="verse__date">09 / 2026</span>
+            <span class="verse__event">Developing new interactive experiences.</span>
+          </li>
+          <li data-reveal class="verse__soon">
+            <span class="verse__date">COMING SOON</span>
+            <span class="verse__event">Experimental software.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SHOWCASE — live deployed projects
+    ============================================================ -->
+    <section id="showcase" class="section showcase">
+      <div class="section__head">
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>THE SHOWCASE</p>
+        <h2 class="section__title">Live in the verse<br>right now.</h2>
+        <p class="showcase__sub" data-reveal>Deployed, out in the world, and open to visit — a running index of Tempest Rosa builds.</p>
+      </div>
+
+      <ul class="showcase__index">
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Artisteria-grand/" target="_blank" rel="noopener">
+            <span class="showcase__n">01</span>
+            <span class="showcase__name">Artisteria Grand</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Unreal-Atlas/" target="_blank" rel="noopener">
+            <span class="showcase__n">02</span>
+            <span class="showcase__name">Unreal Atlas</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/ELAN/" target="_blank" rel="noopener">
+            <span class="showcase__n">03</span>
+            <span class="showcase__name">&Eacute;lan</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/The-Atlantians/" target="_blank" rel="noopener">
+            <span class="showcase__n">04</span>
+            <span class="showcase__name">The Atlantians</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Airport/" target="_blank" rel="noopener">
+            <span class="showcase__n">05</span>
+            <span class="showcase__name">Airport</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Marlow-events/" target="_blank" rel="noopener">
+            <span class="showcase__n">06</span>
+            <span class="showcase__name">Marlow Events</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Artistry-market/" target="_blank" rel="noopener">
+            <span class="showcase__n">07</span>
+            <span class="showcase__name">Artistry Market</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a href="https://kevindevelops-ok.github.io/Sakura/" target="_blank" rel="noopener">
+            <span class="showcase__n">08</span>
+            <span class="showcase__name">Sakura</span>
+            <span class="showcase__arrow" aria-hidden="true">&rarr;</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         PHILOSOPHY
+    ============================================================ -->
+    <section class="section philosophy">
+      <p class="philosophy__statement" data-reveal>
+        Technology should not<br>
+        only <em>function</em>.<br>
+        It should make you<br>
+        <span class="philosophy__accent">feel something.</span>
+      </p>
+    </section>
+
+    <!-- ============================================================
+         JOIN THE VERSE / COMMUNITY — PROJECT INTAKE
+    ============================================================ -->
+    <section id="community" class="section community">
+      <div class="section__head">
+        <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>JOIN THE VERSE</p>
+        <h2 class="section__title">You don&rsquo;t have to know<br>exactly what you need.</h2>
+        <p class="community__sub" data-reveal>You only need an idea.</p>
+      </div>
+
+      <div class="intake" data-reveal>
+        <p class="intake__prompt">WHAT DO YOU WANT TO CREATE?</p>
+
+        <div class="intake__options" role="group" aria-label="What do you want to create?">
+          <button type="button" class="intake__opt" data-value="Interactive website">Interactive website</button>
+          <button type="button" class="intake__opt" data-value="Software">Software</button>
+          <button type="button" class="intake__opt" data-value="AI system">AI system</button>
+          <button type="button" class="intake__opt" data-value="Digital magazine">Digital magazine</button>
+          <button type="button" class="intake__opt" data-value="Visual work">Visual work</button>
+          <button type="button" class="intake__opt" data-value="Experimental project">Experimental project</button>
+          <button type="button" class="intake__opt intake__opt--wide" data-value="Not sure yet">I have an idea but don&rsquo;t know what I need</button>
+        </div>
+
+        <form
+          id="intakeForm"
+          class="intake__form"
+          hidden
+          data-emailjs-service-id="service_zawj518"
+          data-emailjs-template-id="template_ts80he9"
+          data-emailjs-public-key="zEh5qRejixiIkhnmM"
+        >
+          <p class="intake__form-lead">Great — let&rsquo;s begin with <span id="intakeChoice">this</span>.</p>
+
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-error">
+            <p class="field__error" id="f-name-error" role="alert" hidden>Please enter your name.</p>
+          </div>
+
+          <div class="field">
+            <label for="f-contact">Email or phone number</label>
+            <input type="text" id="f-contact" name="contact" autocomplete="email" required aria-describedby="f-contact-error" placeholder="you@example.com or (555) 123-4567">
+            <p class="field__error" id="f-contact-error" role="alert" hidden>Enter a valid email address or phone number — we&rsquo;ll only use it to reply to you.</p>
+          </div>
+
+          <div class="field">
+            <label for="f-what">What are you trying to create?</label>
+            <input type="text" id="f-what" name="what" required>
+          </div>
+
+          <div class="field">
+            <label for="f-desc">Description</label>
+            <textarea id="f-desc" name="description" rows="4" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="f-refs">References / inspiration <span class="field__optional">(optional)</span></label>
+            <input type="text" id="f-refs" name="references">
+          </div>
+
+          <div class="field">
+            <label for="f-budget">Budget range <span class="field__optional">(optional)</span></label>
+            <select id="f-budget" name="budget">
+              <option value="">Prefer not to say</option>
+              <option value="Under $1,000">Under $1,000</option>
+              <option value="$1,000 – $5,000">$1,000 – $5,000</option>
+              <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+              <option value="$15,000+">$15,000+</option>
+            </select>
+          </div>
+
+          <input type="hidden" name="category" id="f-category" value="">
+          <!-- honeypot: real visitors never fill this in; bots usually do -->
+          <input type="text" name="_gotcha" class="field__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <!--
+            THIS FORM SENDS A REAL EMAIL THAT YOU WRITE — one setup step left.
+            ───────────────────────────────────────────────────────────────
+            It's wired for EmailJS (emailjs.com), a free service built for
+            static sites. Unlike a plain form-relay service, EmailJS lets
+            YOU compose the actual email — subject line, greeting, layout,
+            sign-off — in their template editor, with the visitor's answers
+            dropped into placeholders you place ({{name}}, {{description}},
+            etc). No backend code needed. To turn it on:
+
+              1. Go to emailjs.com and create a free account.
+              2. Email Services → Add New Service → connect the inbox
+                 you want to SEND from (Gmail, Outlook, etc). This gives
+                 you a Service ID. (This is just the sending account —
+                 not where submissions land, see step 3.)
+              3. Email Templates → Create New Template. EmailJS shows
+                 you a gallery of starter drafts to pick from (or blank)
+                 — pick one, then rewrite the Subject and body yourself
+                 using merge fields for what the visitor typed:
+                 {{name}}, {{contact}}, {{what}}, {{description}},
+                 {{references}}, {{budget}}, {{category}}.
+                   → set "To Email" to YOUR OWN address — this is what
+                     decides which email the website uses to notify you.
+                   → optionally set "Reply To" to {{contact}} so hitting
+                     Reply goes straight to the visitor.
+                 Save to get a Template ID.
+              4. Go to Account → API Keys and copy your Public Key.
+              5. Paste all three into this <form>'s data-emailjs-service-id,
+                 data-emailjs-template-id, and data-emailjs-public-key
+                 attributes above.
+
+            Full walkthrough — including example template wording — is in
+            README.md under "Connecting the project-intake form". Until
+            all three IDs are set, submissions are logged to the browser
+            console instead of sent, so nothing is lost silently and it's
+            obvious setup still needs finishing.
+
+            SECURITY: this Public Key is meant to be visible in page
+            source — that's how EmailJS is designed to work — but by
+            default anyone who copies it could send email through your
+            template from a different site. Lock that down in one step:
+            EmailJS dashboard → Account → Security → Allowed Origins /
+            Domains, and add your real site's domain. Once set, EmailJS
+            rejects any request that doesn't come from that domain, so
+            a copied key becomes useless elsewhere. See README.md under
+            "Locking EmailJS down to your domain only".
+          -->
+
+          <button type="submit" class="btn btn--filled intake__submit">
+            <span class="intake__submit-label">BEGIN A PROJECT <span aria-hidden="true">&rarr;</span></span>
+          </button>
+
+          <p id="intakeSuccess" class="intake__success" role="status" hidden>
+            Received. We&rsquo;ll be in touch soon — welcome to the verse.
+          </p>
+          <p id="intakeError" class="intake__error" role="alert" hidden>
+            Something went wrong sending that — mind trying again, or <a href="mailto:tempestrosa.studio@gmail.com">email us directly</a>?
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <img class="footer__logo" src="tempest.png" alt="Tempest Rosa — Create. Innovate. Elevate. Est. 2026" width="900" height="811" loading="lazy">
+    </div>
+
+    <div class="footer__grid">
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#work">Work</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#architect">Architect</a>
+        <a href="#lab">Lab</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#community">Community</a>
+      </nav>
+
+      <div class="footer__connect">
+        <p class="footer__connect-label">CONNECT</p>
+        <a href="https://github.com/kevinDevelops-ok" target="_blank" rel="noopener">GitHub <span class="sr-only">(opens in a new tab)</span></a>
+        <a href="mailto:tempestrosa.studio@gmail.com">Email</a>
+        <a href="#" aria-disabled="true">Instagram <span class="footer__soon">— soon</span></a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__statement">SEE YOU IN THE VERSE.</p>
+      <p class="footer__meta">TEMPEST ROSA &middot; EST. 2026 &middot; Independent Digital Studio</p>
+    </div>
+  </footer>
+
+</div><!-- /#site -->
+
+<script src="script.js" defer></script>
+</body>
+</html>
